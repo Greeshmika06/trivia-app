@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trivia Time</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body class="lightmode">
+
+  <div id="mode">
+    <button class="buttons" id="modebtn">Dark mode</button>
+  </div>
+  <div id="exit" style="display: none">
+    <button class="buttons" id="exitbtn">Exit</button>
+  </div>
+  <button class="buttons" id="soundbtn">
+  <img id="soundicon" src="images/volume.png" width="24" >
+</button>
+
+
+
+  <div id="screen1">
+    <h1>Trivia Time</h1>
+    <h2>Let the fun begin!</h2>
+    <button class="buttons" id="startbutton">Start</button>
+  </div>
+
+
+  <div id="screen2">
+    <form>
+      <h4>Enter your name</h4>
+      <input type="text" id="username" placeholder="Name" /><br />
+      <h4>Select topic</h4>
+      <select name="topic" id="topic">
+        <option>Any</option>
+        <option value="17">Science and Nature</option> <!--value based on api url-->
+        <option value="28">Vehicles</option>
+        <option value="19">Maths</option>
+        <option value="27">Animals</option>
+        <option value="18">Computers</option>
+      </select><br />
+      <h4>Select level</h4>
+      <select name="level" id="level">
+        <option>Any</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+        </select>
+      
+      </form>
+      <button class="buttons" type ="button" id ="begin">Begin Game</button>
+    
+  </div>
+
+  <div id="screen3">
+    <p id="hellomessage">Hello</p>
+    <p id="count">We'll be starting in 5...  </p>
+  </div>
+
+  <div id="screen4">
+    <div id="popup_msg"></div>
+    <p id="timer">Time left: 15s </p>
+    <h5>Question 1</h5>
+    <div id="question"></div>
+    <div>
+    <input type="radio" name="question1" id="opt0" />
+  <label for="opt0" id="label0"></label>
+    </div>
+
+    <div>
+  <input type="radio" name="question1" id="opt1" />
+  <label for="opt1" id="label1"></label>
+    </div>
+
+  <div>
+  <input type="radio" name="question1" id="opt2" />
+  <label for="opt2" id="label2"></label>
+  </div>
+  
+  <div>
+  <input type="radio" name="question1" id="opt3" />
+  <label for="opt3" id="label3"></label>
+  </div>
+<button class="buttons" id="checknext"> Check Answer </button>
+
+  </div>
+
+  
+  <div id="screen5" class="screen5">
+  <p id="firstchild">Quiz Over!</p>
+  <p id="secondchild">Please Wait...</p>
+  </div>
+
+  <div id="screen6" style="display: none">
+    <p id="your_score">Your score</p>
+    <div id="score"></div>
+    <div id="message"></div>
+    <div id="restart">
+     <button class="buttons" id="play">Play Again</button>
+    </div>
+  </div>
+
+
+  <audio id="bgmusic" src="audio/background.mp3" loop></audio>
+  <audio id="click" src="audio/click.mp3" ></audio>
+    <audio id="correct" src="audio/correct.mp3"></audio>
+  <audio id="wrong" src="audio/wrong.mp3"></audio>
+  <audio id="timeup" src="audio/timeup.mp3"></audio>
+  <audio id="endmusic" src="audio/end.mp3"></audio>
+
+  <script src="script.js"></script>
+
+
+</body>
+</html>
