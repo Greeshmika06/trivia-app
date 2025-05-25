@@ -32,7 +32,7 @@ function Apiurl() {
   const category = document.getElementById("topic").value;
   const difficulty = document.getElementById("level").value;
 
-  let url = "https://opentdb.com/api.php?amount=2";
+  let url = "https://opentdb.com/api.php?amount=10";
 
   if (category && category !== "Any") {
     url += `&category=${category}`;
